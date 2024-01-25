@@ -8,13 +8,15 @@
 </p>
 
 ## install
-git clone https://github.com/prabowo87/restaurant-ddd.git
-cd restaurant-ddd
-composer install
-create database in mysql
-setup .env for database
-php artisan migrate
-php artisan test
+- git clone https://github.com/prabowo87/restaurant-ddd.git
+- cd restaurant-ddd
+- composer install
+- create database in mysql
+- setup .env for database
+- php artisan migrate
+- php artisan test
+
+
 
 #for test race condition not available yet, but in controller already to this prevent
 
