@@ -48,7 +48,6 @@ class ReservationRepository implements ReservationInterface
             // Else cant create reservation.
 
             //lockForUpdate to prevent race condition
-
             $restaurantTableCheck=RestaurantTable::lockForUpdate()->where('id',$request->table_id)->first();
             if ($restaurantTableCheck){
                 if ($restaurantTableCheck->is_booked=='no'){
@@ -65,6 +64,9 @@ class ReservationRepository implements ReservationInterface
 
                     // Save the Reservation
                     $reservation->save();
+                    $restaurantTableCheck->is_booked='yes';
+                    $restaurantTableCheck->user_id=$request->user_id;
+                    $restaurantTableCheck->save();
                     DB::commit();
            
                     return $this->success(

@@ -7,6 +7,17 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## install
+git clone https://github.com/prabowo87/restaurant-ddd.git
+cd restaurant-ddd
+composer install
+create database in mysql
+setup .env for database
+php artisan migrate
+php artisan test
+
+#for test race condition not available yet, but in controller already to this prevent
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
